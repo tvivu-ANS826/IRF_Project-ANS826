@@ -16,5 +16,10 @@ namespace Korona
         {
             InitializeComponent();
         }
+
+        private void save_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
