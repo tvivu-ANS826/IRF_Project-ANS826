@@ -19,6 +19,7 @@ namespace Korona
         AdatbazisEntities context = new AdatbazisEntities();
         List<string> betegNevek = new List<string>();
         List<Betegek> listOfBetegek;
+        List<Main_table> listOfHalalozasok;
 
         public Form1()
         {
@@ -102,6 +103,25 @@ namespace Korona
             {
                 betegneveComboBox.Text = betegneveComboBox.SelectedItem.ToString();
             }
+        }
+
+        private void exportBtn_Click(object sender, EventArgs e)
+        {
+            LoadData();
+            ExcelManager em = new ExcelManager(@"C:\teszt\halalozas.xlsx","Halalozasok");
+            string[] headersHalalozasok = new string[] {
+            "Id",
+            "Beteg_neve",
+            "Alapbetegseg",
+            "Death_date"
+            };
+            em.HalalozasKiirasExcel(headersHalalozasok, listOfHalalozasok);
+            em.Mentes();
+        }
+        private void LoadData() 
+        {
+            listOfBetegek = context.Betegek.ToList();
+            listOfHalalozasok = context.Main_table.ToList();
         }
     }
 }

@@ -31,9 +31,52 @@ namespace Korona
             xlRange = xlSheet.UsedRange;
         }
 
+        public void HalalozasKiirasExcel(string[] headers, List<Main_table> halalozasiLista) 
+        {
+            for (int i = 0; i < headers.Length; i++)
+            {
+                CellaKitolt(1, i + 1, headers[i]);
+            }
+            object[,] valuesOfHalalozasok = new object[halalozasiLista.Count, headers.Length];
+            int counter = 0;
+            foreach (Main_table halalozas in halalozasiLista)
+            {
+                valuesOfHalalozasok[counter, 0] = halalozas.Id;
+                valuesOfHalalozasok[counter, 1] = halalozas.Beteg_neve;
+                valuesOfHalalozasok[counter, 2] = halalozas.Alapbetegseg;
+                valuesOfHalalozasok[counter, 3] = halalozas.Death_date;
+                counter++;
+            }
+            xlSheet.get_Range(GetCell(2, 1), GetCell(1 + valuesOfHalalozasok.GetLength(0), valuesOfHalalozasok.GetLength(1))).Value2 = valuesOfHalalozasok;
+        }
 
+        private string GetCell(int x, int y)
+        {
+            string ExcelCoordinate = "";
+            int dividend = y;
+            int modulo;
 
+            while (dividend > 0)
+            {
+                modulo = (dividend - 1) % 26;
+                ExcelCoordinate = Convert.ToChar(65 + modulo).ToString() + ExcelCoordinate;
+                dividend = (int)((dividend - modulo) / 26);
+            }
+            ExcelCoordinate += x.ToString();
 
+            return ExcelCoordinate;
+        }
+
+        public void CellaKitolt(int sor, int oszlop, string ertek) 
+        {
+            xlSheet.Cells[sor, oszlop] = ertek;
+        }
+
+        public void Mentes() 
+        {
+            xlWB.SaveAs(_pathPlusFilename);
+            xlWB.Close();
+        }
 
     }
 }
