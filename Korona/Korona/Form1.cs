@@ -8,17 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Reflection;
 
 namespace Korona
 {
     public partial class Form1 : Form
     {
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tvivu\Desktop\Suli\Corvinus\5.félév\Információs rendszerek fejlesztése\Beadandó projekt\Korona\Korona\Adatbazis.mdf;Integrated Security=True");
+        AdatbazisEntities context = new AdatbazisEntities();
+        List<string> betegNevek = new List<string>();
+        List<Betegek> listOfBetegek;
+
         public Form1()
         {
             InitializeComponent();
-        }
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\tvivu\Desktop\Suli\Corvinus\5.félév\Információs rendszerek fejlesztése\Beadandó projekt\Korona\Korona\Adatbazis.mdf;Integrated Security=True");
-
+        }   
         private void save_btn_Click(object sender, EventArgs e)
         {
             connection.Open();
@@ -70,12 +75,33 @@ namespace Korona
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string query = "SELECT Nev FROM Betegek ";
 
-            SqlDataAdapter SDA2 = new SqlDataAdapter(query, connection);
+            // string query = "SELECT Nev FROM Betegek";
+            //SqlDataAdapter SDA2 = new SqlDataAdapter(query, connection);
+            // connection.Open();
+            // DataSet ds = new DataSet();
+            // SDA2.Fill(ds, "Betegek");
+            //betegneveComboBox.DisplayMember = "Nev";
+            // betegneveComboBox.ValueMember = "Nev";            
+            // nemeComboBox.DataSource = ds.Tables["Betegek"];
+            // connection.Close();
+            listOfBetegek = context.Betegek.ToList();
+            foreach (Betegek beteg in listOfBetegek)
+            {
+                betegNevek.Add(beteg.Nev);
+            }
+            BindingSource bs = new BindingSource();
+            bs.DataSource = betegNevek;
+            betegneveComboBox.DataSource = bs;
 
-            connection.Open();
-            DataSet ds = new DataSet();
+        }
+
+        private void betegneveComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (betegneveComboBox.SelectedItem != null)
+            {
+                betegneveComboBox.Text = betegneveComboBox.SelectedItem.ToString();
+            }
         }
     }
 }

@@ -288,6 +288,7 @@
             this.betegneveComboBox.Name = "betegneveComboBox";
             this.betegneveComboBox.Size = new System.Drawing.Size(200, 28);
             this.betegneveComboBox.TabIndex = 9;
+            this.betegneveComboBox.SelectedIndexChanged += new System.EventHandler(this.betegneveComboBox_SelectedIndexChanged);
             // 
             // Form1
             // 
