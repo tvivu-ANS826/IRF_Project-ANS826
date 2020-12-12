@@ -20,10 +20,15 @@ namespace Korona
         List<string> betegNevek = new List<string>();
         List<Betegek> listOfBetegek;
         List<Main_table> listOfHalalozasok;
+        Graphics g; Pen p; Point cursor;
+        
 
         public Form1()
         {
             InitializeComponent();
+            this.CreateGraphics();
+            p = new Pen(Color.Black, 3);
+            Invalidate();
         }   
         private void save_btn_Click(object sender, EventArgs e)
         {
@@ -75,17 +80,7 @@ namespace Korona
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-            // string query = "SELECT Nev FROM Betegek";
-            //SqlDataAdapter SDA2 = new SqlDataAdapter(query, connection);
-            // connection.Open();
-            // DataSet ds = new DataSet();
-            // SDA2.Fill(ds, "Betegek");
-            //betegneveComboBox.DisplayMember = "Nev";
-            // betegneveComboBox.ValueMember = "Nev";            
-            // nemeComboBox.DataSource = ds.Tables["Betegek"];
-            // connection.Close();
+        {            
             listOfBetegek = context.Betegek.ToList();
             foreach (Betegek beteg in listOfBetegek)
             {
@@ -122,6 +117,52 @@ namespace Korona
         {
             listOfBetegek = context.Betegek.ToList();
             listOfHalalozasok = context.Main_table.ToList();
+        }
+
+        private void exportBtn_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            /* Graphics g = e.Graphics;
+             Pen myPen = new Pen(Color.Black);
+             Brush myBrush = new SolidBrush(Color.Red);
+
+             Font drawFont = new Font("Arial", 16);
+             PointF drawPoint = new PointF(150.0F, 150.0F);
+             g.DrawString("Hello World", drawFont, myBrush, drawPoint);*/
+
+            Bitmap kep;
+            kep = new Bitmap(@"C:\Users\tvivu\Desktop\Suli\Corvinus\5.félév\Információs rendszerek fejlesztése\Beadandó projekt\index.jpg");
+            Graphics grafika;
+            grafika = this.CreateGraphics();
+            grafika.DrawImage(kep, 500, 500);
+        }
+
+        private void checkBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            cursor = this.PointToClient(Cursor.Position);
+            label11.Text = "X: " + cursor.X + " Y: " + cursor.Y;
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                g.DrawEllipse(p, cursor.X - 10, cursor.Y - 10, 20, 20);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {           
+           
         }
     }
 }
