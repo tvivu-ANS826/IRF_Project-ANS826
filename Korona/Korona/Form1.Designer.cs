@@ -62,7 +62,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox1.BackColor = System.Drawing.Color.Wheat;
             this.groupBox1.Controls.Add(this.eletkorTextBox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.elerhetosegTextBox);
@@ -79,14 +79,14 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox1.Location = new System.Drawing.Point(12, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(437, 366);
+            this.groupBox1.Size = new System.Drawing.Size(350, 374);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Beteg felvétele";
             // 
             // eletkorTextBox
             // 
-            this.eletkorTextBox.Location = new System.Drawing.Point(157, 146);
+            this.eletkorTextBox.Location = new System.Drawing.Point(128, 134);
             this.eletkorTextBox.Name = "eletkorTextBox";
             this.eletkorTextBox.Size = new System.Drawing.Size(100, 26);
             this.eletkorTextBox.TabIndex = 17;
@@ -94,24 +94,24 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 195);
+            this.label3.Location = new System.Drawing.Point(11, 195);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 20);
+            this.label3.Size = new System.Drawing.Size(111, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Elérhetőség";
+            this.label3.Text = "Elérhetőség:";
             // 
             // elerhetosegTextBox
             // 
-            this.elerhetosegTextBox.Location = new System.Drawing.Point(157, 195);
+            this.elerhetosegTextBox.Location = new System.Drawing.Point(128, 195);
             this.elerhetosegTextBox.Name = "elerhetosegTextBox";
             this.elerhetosegTextBox.Size = new System.Drawing.Size(100, 26);
             this.elerhetosegTextBox.TabIndex = 15;
             // 
             // save_btn
             // 
-            this.save_btn.Location = new System.Drawing.Point(294, 292);
+            this.save_btn.Location = new System.Drawing.Point(247, 321);
             this.save_btn.Name = "save_btn";
-            this.save_btn.Size = new System.Drawing.Size(127, 49);
+            this.save_btn.Size = new System.Drawing.Size(97, 41);
             this.save_btn.TabIndex = 12;
             this.save_btn.Text = "Mentés";
             this.save_btn.UseVisualStyleBackColor = true;
@@ -119,21 +119,21 @@
             // 
             // tajszamTextBox
             // 
-            this.tajszamTextBox.Location = new System.Drawing.Point(157, 303);
+            this.tajszamTextBox.Location = new System.Drawing.Point(128, 303);
             this.tajszamTextBox.Name = "tajszamTextBox";
             this.tajszamTextBox.Size = new System.Drawing.Size(100, 26);
             this.tajszamTextBox.TabIndex = 16;
             // 
             // nevTextBox
             // 
-            this.nevTextBox.Location = new System.Drawing.Point(157, 90);
+            this.nevTextBox.Location = new System.Drawing.Point(128, 87);
             this.nevTextBox.Name = "nevTextBox";
             this.nevTextBox.Size = new System.Drawing.Size(100, 26);
             this.nevTextBox.TabIndex = 14;
             // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(157, 38);
+            this.idTextBox.Location = new System.Drawing.Point(128, 38);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(100, 26);
             this.idTextBox.TabIndex = 13;
@@ -142,20 +142,20 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 149);
+            this.label6.Location = new System.Drawing.Point(11, 140);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 20);
+            this.label6.Size = new System.Drawing.Size(71, 20);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Életkor";
+            this.label6.Text = "Életkor:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 309);
+            this.label5.Location = new System.Drawing.Point(11, 309);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 20);
+            this.label5.Size = new System.Drawing.Size(80, 20);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Tajszám";
+            this.label5.Text = "Tajszám:";
             // 
             // nemeComboBox
             // 
@@ -163,7 +163,7 @@
             this.nemeComboBox.Items.AddRange(new object[] {
             "Férfi",
             "Nő"});
-            this.nemeComboBox.Location = new System.Drawing.Point(157, 247);
+            this.nemeComboBox.Location = new System.Drawing.Point(128, 247);
             this.nemeComboBox.Name = "nemeComboBox";
             this.nemeComboBox.Size = new System.Drawing.Size(100, 28);
             this.nemeComboBox.TabIndex = 7;
@@ -171,33 +171,33 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 250);
+            this.label4.Location = new System.Drawing.Point(11, 250);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 20);
+            this.label4.Size = new System.Drawing.Size(60, 20);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Neme";
+            this.label4.Text = "Neme:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 93);
+            this.label2.Location = new System.Drawing.Point(7, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 20);
+            this.label2.Size = new System.Drawing.Size(44, 20);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Név";
+            this.label2.Text = "Név:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 44);
+            this.label1.Location = new System.Drawing.Point(7, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 20);
+            this.label1.Size = new System.Drawing.Size(30, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Id";
+            this.label1.Text = "Id:";
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox2.BackColor = System.Drawing.Color.SandyBrown;
             this.groupBox2.Controls.Add(this.betegneveComboBox);
             this.groupBox2.Controls.Add(this.halalozasSaveBtn);
             this.groupBox2.Controls.Add(this.label10);
@@ -208,9 +208,9 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.hIdTextBox);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox2.Location = new System.Drawing.Point(485, 23);
+            this.groupBox2.Location = new System.Drawing.Point(382, 23);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(437, 366);
+            this.groupBox2.Size = new System.Drawing.Size(396, 374);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Halálozási adatok felvétele";
@@ -218,7 +218,7 @@
             // betegneveComboBox
             // 
             this.betegneveComboBox.FormattingEnabled = true;
-            this.betegneveComboBox.Location = new System.Drawing.Point(201, 120);
+            this.betegneveComboBox.Location = new System.Drawing.Point(171, 117);
             this.betegneveComboBox.Name = "betegneveComboBox";
             this.betegneveComboBox.Size = new System.Drawing.Size(200, 28);
             this.betegneveComboBox.TabIndex = 9;
@@ -226,9 +226,9 @@
             // 
             // halalozasSaveBtn
             // 
-            this.halalozasSaveBtn.Location = new System.Drawing.Point(171, 294);
+            this.halalozasSaveBtn.Location = new System.Drawing.Point(274, 321);
             this.halalozasSaveBtn.Name = "halalozasSaveBtn";
-            this.halalozasSaveBtn.Size = new System.Drawing.Size(109, 51);
+            this.halalozasSaveBtn.Size = new System.Drawing.Size(97, 41);
             this.halalozasSaveBtn.TabIndex = 8;
             this.halalozasSaveBtn.Text = "Mentés";
             this.halalozasSaveBtn.UseVisualStyleBackColor = true;
@@ -237,23 +237,24 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(26, 233);
+            this.label10.Location = new System.Drawing.Point(12, 213);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(153, 20);
+            this.label10.Size = new System.Drawing.Size(158, 20);
             this.label10.TabIndex = 7;
-            this.label10.Text = "Halálozás dátuma";
+            this.label10.Text = "Halálozás dátuma:";
             // 
             // halalozasdatumDateTimePicker1
             // 
-            this.halalozasdatumDateTimePicker1.Location = new System.Drawing.Point(201, 227);
+            this.halalozasdatumDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.halalozasdatumDateTimePicker1.Location = new System.Drawing.Point(176, 207);
             this.halalozasdatumDateTimePicker1.Name = "halalozasdatumDateTimePicker1";
-            this.halalozasdatumDateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.halalozasdatumDateTimePicker1.Size = new System.Drawing.Size(125, 26);
             this.halalozasdatumDateTimePicker1.TabIndex = 6;
             // 
             // AlapbetegsegCheckBox
             // 
             this.AlapbetegsegCheckBox.AutoSize = true;
-            this.AlapbetegsegCheckBox.Location = new System.Drawing.Point(201, 182);
+            this.AlapbetegsegCheckBox.Location = new System.Drawing.Point(176, 165);
             this.AlapbetegsegCheckBox.Name = "AlapbetegsegCheckBox";
             this.AlapbetegsegCheckBox.Size = new System.Drawing.Size(33, 24);
             this.AlapbetegsegCheckBox.TabIndex = 5;
@@ -263,42 +264,43 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(26, 186);
+            this.label9.Location = new System.Drawing.Point(12, 165);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(120, 20);
+            this.label9.Size = new System.Drawing.Size(125, 20);
             this.label9.TabIndex = 4;
-            this.label9.Text = "Alapbetegség";
+            this.label9.Text = "Alapbetegség:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(26, 120);
+            this.label8.Location = new System.Drawing.Point(12, 120);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 20);
+            this.label8.Size = new System.Drawing.Size(105, 20);
             this.label8.TabIndex = 3;
-            this.label8.Text = "Beteg neve";
+            this.label8.Text = "Beteg neve:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 65);
+            this.label7.Location = new System.Drawing.Point(12, 65);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(25, 20);
+            this.label7.Size = new System.Drawing.Size(30, 20);
             this.label7.TabIndex = 2;
-            this.label7.Text = "Id";
+            this.label7.Text = "Id:";
             // 
             // hIdTextBox
             // 
-            this.hIdTextBox.Location = new System.Drawing.Point(201, 59);
+            this.hIdTextBox.Location = new System.Drawing.Point(171, 65);
             this.hIdTextBox.Name = "hIdTextBox";
-            this.hIdTextBox.Size = new System.Drawing.Size(200, 26);
+            this.hIdTextBox.Size = new System.Drawing.Size(130, 26);
             this.hIdTextBox.TabIndex = 0;
             // 
             // exportBtn
             // 
-            this.exportBtn.Location = new System.Drawing.Point(485, 405);
+            this.exportBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.exportBtn.Location = new System.Drawing.Point(553, 422);
             this.exportBtn.Name = "exportBtn";
-            this.exportBtn.Size = new System.Drawing.Size(146, 47);
+            this.exportBtn.Size = new System.Drawing.Size(173, 55);
             this.exportBtn.TabIndex = 2;
             this.exportBtn.Text = "Halálozási Adatok Export";
             this.exportBtn.UseVisualStyleBackColor = true;
@@ -308,7 +310,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 405);
+            this.checkBox1.Location = new System.Drawing.Point(23, 439);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(51, 17);
             this.checkBox1.TabIndex = 3;
@@ -319,7 +321,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(82, 405);
+            this.label11.Location = new System.Drawing.Point(93, 439);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(36, 13);
             this.label11.TabIndex = 4;
@@ -339,15 +341,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 509);
+            this.BackColor = System.Drawing.Color.PaleGreen;
+            this.ClientSize = new System.Drawing.Size(810, 509);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.exportBtn);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Koronavírus adat rögzítés";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.Form1_Click);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
