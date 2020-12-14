@@ -53,8 +53,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.hIdTextBox = new System.Windows.Forms.TextBox();
             this.exportBtn = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -260,6 +258,7 @@
             this.AlapbetegsegCheckBox.TabIndex = 5;
             this.AlapbetegsegCheckBox.Text = " ";
             this.AlapbetegsegCheckBox.UseVisualStyleBackColor = true;
+            this.AlapbetegsegCheckBox.CheckedChanged += new System.EventHandler(this.AlapbetegsegCheckBox_CheckedChanged);
             // 
             // label9
             // 
@@ -307,34 +306,15 @@
             this.exportBtn.Click += new System.EventHandler(this.exportBtn_Click);
             this.exportBtn.Paint += new System.Windows.Forms.PaintEventHandler(this.exportBtn_Paint);
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(23, 439);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(51, 17);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Draw";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.checkBox1_MouseMove);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(93, 439);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 13);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "X:- Y:-";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(179, 454);
+            this.button1.Location = new System.Drawing.Point(12, 413);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
@@ -344,8 +324,6 @@
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(810, 509);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.exportBtn);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -361,7 +339,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -392,8 +369,6 @@
         private System.Windows.Forms.TextBox hIdTextBox;
         private System.Windows.Forms.ComboBox betegneveComboBox;
         private System.Windows.Forms.Button exportBtn;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button1;
     }
 }

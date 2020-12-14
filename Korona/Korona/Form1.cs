@@ -48,7 +48,8 @@ namespace Korona
             SDA.SelectCommand.ExecuteNonQuery();
             
             connection.Close();
-            
+            LoadData();
+            setMaxBetegID(listOfBetegek);
             MessageBox.Show("Sikeresen elmentve");
         }
 
@@ -75,12 +76,14 @@ namespace Korona
             SDA.SelectCommand.ExecuteNonQuery();
 
             connection.Close();
-
+            LoadData();
+            setMaxHalalozasID(listOfHalalozasok);
             MessageBox.Show("Sikeresen elmentve");
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {            
+        {
+            LoadData();
             listOfBetegek = context.Betegek.ToList();
             foreach (Betegek beteg in listOfBetegek)
             {
@@ -89,6 +92,8 @@ namespace Korona
             BindingSource bs = new BindingSource();
             bs.DataSource = betegNevek;
             betegneveComboBox.DataSource = bs;
+            setMaxBetegID(listOfBetegek);
+            setMaxHalalozasID(listOfHalalozasok);
 
         }
 
@@ -134,11 +139,11 @@ namespace Korona
              PointF drawPoint = new PointF(150.0F, 150.0F);
              g.DrawString("Hello World", drawFont, myBrush, drawPoint);*/
 
-            Bitmap kep;
+            /*Bitmap kep;
             kep = new Bitmap(@"C:\Users\tvivu\Desktop\Suli\Corvinus\5.félév\Információs rendszerek fejlesztése\Beadandó projekt\index.jpg");
             Graphics grafika;
             grafika = this.CreateGraphics();
-            grafika.DrawImage(kep, 500, 500);
+            grafika.DrawImage(kep, 500, 500);*/
         }
 
         private void checkBox1_MouseMove(object sender, MouseEventArgs e)
@@ -148,21 +153,66 @@ namespace Korona
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            cursor = this.PointToClient(Cursor.Position);
-            label11.Text = "X: " + cursor.X + " Y: " + cursor.Y;
+            
         }
 
         private void Form1_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
-            {
-                g.DrawEllipse(p, cursor.X - 10, cursor.Y - 10, 20, 20);
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {           
            
+        }
+        public void setMaxBetegID(List<Betegek> list)
+        {
+            if (list.Count == 0)
+            {
+                throw new InvalidOperationException("Üres a lista");
+            }
+            int maxId = int.MinValue;
+            foreach (Betegek beteg in list)
+            {
+                if (beteg.Id > maxId )
+                {
+                    maxId = beteg.Id;
+                }
+            }
+            idTextBox.Text = (maxId + 1).ToString();
+        }
+        public void setMaxHalalozasID(List<Main_table> list) 
+        {
+            if (list.Count == 0)
+            {
+                throw new InvalidOperationException("Üres a lista");
+            }
+            int maxId = int.MinValue;
+            foreach (Main_table rekord in list)
+            {
+                if (rekord.Id > maxId)
+                {
+                    maxId = rekord.Id;
+                }
+            }
+            hIdTextBox.Text = (maxId + 1).ToString();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AlapbetegsegCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AlapbetegsegCheckBox.Checked)
+            {
+                Bitmap kep;
+                kep = new Bitmap(@"C:\Users\tvivu\Desktop\Suli\Corvinus\5.félév\Információs rendszerek fejlesztése\Beadandó projekt\index.jpg");
+                Graphics grafika;
+                grafika = this.CreateGraphics();
+                grafika.DrawImage(kep, 500, 500);
+            }
         }
     }
 }
